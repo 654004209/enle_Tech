@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html style="font-size: 18.75px;">
+ <head> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" /> 
+  <meta name="format-detection" content="telephone=no" /> 
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" /> 
+  <title>和世界杯球员比工资</title> 
+  <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html, body {
+        -webkit-touch-callout: none;
+        font-family:'PingFang SC', "Helvetica Neue", Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        user-select: none;
+        width: 100%;
+        min-height: 100%;
+        height: 100%;
+        background-size: 100% auto;
+        background-color: #235AAD;
+      }
+
+      #app {
+        height: 100%;
+      }.chatu{
+      	    margin-top: 18%;
+    position: absolute;
+    top: 550px;
+    left: 50%;
+    margin-left: -291px;
+      }
+    </style> 
+  <link href="./css/playerSalary.css" rel="stylesheet" /> 
+ </head> 
+ <body> 
+  <div id="app">
+   <div id="index" class="main">
+    <div class="head">
+     <img src="img/logo.png" /> 
+     <span><input type="tel" placeholder="输入你的月薪（人民币）" maxlength="6" id="money" /></span>
+    </div> 
+    <div class="content">
+	 <!------------------------->
+     <span class="list" player="1"><span class="img-wrapper"><img src="img/head/梅西.jpg" /> 
+     </span> <p class="name"> 梅西</p></span>
+	 <!------------------------->
+     <span class="list" player="2"><span class="img-wrapper"><img src="img/head/内马尔.jpg" /> 
+     </span> <p class="name"> 内马尔</p></span>
+	 <!------------------------->
+     <span class="list" player="3"><span class="img-wrapper"><img src="img/head/C罗.jpg" /> 
+     </span> <p class="name"> C罗</p></span>
+	 <!------------------------->
+     <span class="list" player="4"><span class="img-wrapper"><img src="img/head/苏亚雷斯.jpg" /> 
+     </span> <p class="name"> 苏亚雷斯</p></span>
+	 <!------------------------->
+     <span class="list" player="5"><span class="img-wrapper"><img src="img/head/博格巴.jpg" /> 
+     </span> <p class="name"> 博格巴</p></span>
+	 <!------------------------->
+     <span class="list" player="6"><span class="img-wrapper"><img src="img/head/阿扎尔.jpg" /> 
+     </span> <p class="name"> 阿扎尔</p></span>
+	 <!------------------------->
+     <span class="list" player="7"><span class="img-wrapper"><img src="img/head/莱万.jpg" /> 
+     </span> <p class="name"> 莱万</p></span>
+	 <!------------------------->
+     <span class="list" player="8"><span class="img-wrapper"><img src="img/head/格列兹曼.jpg" /> 
+     </span> <p class="name"> 格列兹曼</p></span>
+	 <!------------------------->
+     <span class="list" player="9"><span class="img-wrapper"><img src="img/head/奥斯卡.jpg" /> 
+     </span> <p class="name"> 奥斯卡</p></span>
+	 <!------------------------->
+     <span class="list" player="10"><span class="img-wrapper"><img src="img/head/胡尔克.jpg" /> 
+     </span> <p class="name"> 胡尔克</p></span>
+	 <!------------------------->
+     <span class="list" player="11"><span class="img-wrapper"><img src="img/head/姆巴佩.jpg" /> 
+     </span> <p class="name"> 姆巴佩</p></span>
+	 <!------------------------->
+     <span class="list" player="12"><span class="img-wrapper"><img src="img/head/厄齐尔.jpg" /> 
+     </span> <p class="name"> 厄齐尔</p></span>
+	 <!------------------------->
+ 
+    </div> 
+    <div class="dialog" style="display: none;">
+     <div class="mask"></div> 
+     <div class="dialog-content">
+      <div class="text">
+       <p></p>
+      </div> 
+      <div class="btn-group">
+       好
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> 
+ </body>
+ <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $(".list").click(function(){
+    var money = $("#money").val();
+	var player = $(this).attr("player")
+	
+	
+    if(check(money)){
+	  window.location.href="index2.html?player=" + player + "&money=" + money;
+	}
+  });
+});
+
+function check(money){
+    var t=new RegExp("^[-]?[0-9]*$");
+	if(!t.test(money)){
+	    alert("哎？你的工资混进了奇怪的东西！")
+		return false;
+	}
+	if(money == ""){
+	  alert("你还没有输入工资哦！");
+	  return false;
+	}
+	if(money > 999999){
+	  alert("土豪，输入工资太高了！");
+	  return false;
+	}
+	if(money < 1100){
+	  alert("太惨了，你的工资低于法定标准！重新输入吧！！");
+	  return false;
+	}
+	return true;
+}
+</script>
+</html>

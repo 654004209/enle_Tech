@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<title>和世界杯球员比工资</title>
+		<link rel="stylesheet" href="css/jquery.fullPage.css">
+		<style>
+			.section {
+				text-align: center;
+				font: 50px "Microsoft Yahei";
+				color: #fff;
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+			}
+		</style>
+		<style>
+			#logo {
+				position: absolute;
+				width: 28%;
+				margin-top: 10%;
+				margin-left: -45%;
+			}
+			
+			.erweima{
+				width: 26.7%;
+				height: 15%;
+				margin-bottom: 30%;
+				background-color: #FFFFFF;
+				margin-left: 36.7%;
+			}
+			
+			.chatu{
+      	    margin-top: 15%;
+      	    position: absolute;
+      	    top: 550px;
+      	    left: 50%;
+      	    margin-left: -291px;
+      }
+			
+			.name {
+				font-size: 60px;
+				color: #FFD857;
+				font-family: PingFangSC-Medium;
+			}
+			
+			.yellow {
+				font-size: 80px;
+				font-family: "agency fb";
+				font-weight: 400;
+				margin: 0 .2em;
+				color: #FFD857;
+			}
+			
+			.section1 {
+				background: -webkit-gradient(linear, 0 0, 0 100%, from(#8324B3), to(#6E1F99));
+			}
+			
+			.section2 {
+				background: -webkit-gradient(linear, 0 0, 0 100%, from(#EB662D), to(#B34D1E));
+			}
+			
+			.section3 {
+				background: -webkit-gradient(linear, 0 0, 0 100%, from(#CC2F2F), to(#B82121));
+			}
+			
+			.section4 {
+				background: -webkit-gradient(linear, 0 0, 0 100%, from(#7058B8), to(#543EB3));
+			}
+			
+			.section5 {
+				background: -webkit-gradient(linear, 0 0, 0 100%, from(#368DBE), to(#0B7399));
+			}
+			
+			.section6 {
+				background: -webkit-gradient(linear, 0 0, 0 100%, from(#235AAD), to(#27348A));
+				position: absolute;
+			}
+		</style>
+		<style type="text/css">
+			.float_div {
+				position: absolute;
+				width: 20%;
+				bottom: 5%;
+				left: 40%;
+				transform: translate(-50%, -50%);
+			}
+			.float_div img{
+				width: 100% ;
+			}
+			/*nimation-delay:1s*/
+			
+			@keyframes arrow1 {
+				0% {
+					transform: translateY(0);
+				}
+				100% {
+					transform: translateY(20px);
+				}
+			}
+			
+			@-webkit-keyframes arrow1 {
+				0% {
+					-webkit-transform: translateY(0);
+				}
+				100% {
+					-webkit-transform: translateY(20px);
+				}
+			}
+			
+			.arrow {
+				animation: arrow1 1s infinite;
+				-webkit-animation: arrow1 1s infinite;
+				animation-timing-function: ease-in-out;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-direction: alternate;
+				animation-direction: alternate;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<div id="dowebok">
+			<div class="section section1">
+				<img id="logo" src="img/logo.png" alt="" />
+				<p style="    padding-top: 17rem;"><span class="name "></span>年薪为<span class="salary yellow"></span>欧元</p>
+				<p data-v-62f6f3b2="" class="linetwo1">他每<span class="num1 yellow"></span>分钟就可以挣你一个月的薪水</p>
+				<div class="chatu">
+					<img src="img/chatu1.png" />
+				</div>
+				<div class="arrow float_div"><img src="img/jian.png" /></div>
+
+			</div>
+			<div class="section section2">
+				<img id="logo" src="img/logo.png" alt="" />
+				<p style="    padding-top: 17rem;">你要从<span class="num2 yellow"></span>年前工作到现在</p>
+				<p>才能挣到<span class="name"></span>一年的薪水</p>
+				<div class="chatu">
+					<img src="img/chatu2.png" />
+				</div>
+				<div class="arrow float_div"><img src="img/jian.png" /></div>
+			</div>
+			<div class="section section3">
+				<img id="logo" src="img/logo.png" alt="" />
+				<p style="    padding-top: 17rem;"><span class="name"></span><span class="num3 yellow"></span>分钟薪水可以买一款<br/>限量版AJ球鞋</p>
+				<p>而你<span class="num4 yellow"></span> 分钟薪水只能买一双<br/>中国乔丹球鞋</p>
+				<div class="chatu">
+					<img src="img/chatu3.png" />
+				</div>
+				<div class="arrow float_div"><img src="img/jian.png" /></div>
+			</div>
+			<div class="section section4">
+				<img id="logo" src="img/logo.png" alt="" />
+				<p style="    padding-top: 17rem;"><span class="name"></span><span class="num5 yellow"></span>月的薪水可以在海淀买一套100m2的学区房</p>
+				<p>你要<span class="num6 yellow"></span> 年才能买下一套同样的房子</p>
+				<div class="chatu">
+					<img src="img/chatu4.png" />
+				</div>
+				<div class="arrow float_div"><img src="img/jian.png" /></div>
+			</div>
+			<div class="section section5">
+				<img id="logo" src="img/logo.png" alt="" />
+				<p style="    padding-top: 17rem;">从测试到现在已经过去<span class="num6 yellow" id="second"></span>秒</p>
+				<p>你赚了<span class="yellow">&yen</span><span class="num7 yellow"></span> </p>
+				<p><span class="name"></span>赚了<span class="yellow">&yen</span><span class="num8 yellow" id="playerMoney"></span> </p>
+				<div class="chatu">
+					<img src="img/chatu5.png" />
+				</div>
+				<div class="arrow float_div"><img src="img/jian.png" /></div>
+			</div>
+			<div class="section section6">
+				<p>这还能忍？不能让我一个人扎心</p>
+				<p>发给朋友圈让大家一起感受到世界的恶意</p>
+				<img  src="img/chatu6.png" alt="" />
+				<br />
+				<img style="width: 275px;
+    height: 72px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -137.5px;
+    margin-top: -36px;" src="img/logo.png" alt="" />
+				<br />
+				<img style="margin-top: 300px;" src="img/1.png" alt="" />
+				<div>
+					<a href="#"><img src="img/btn-1.png" style="width:350px;position: absolute;bottom:30px;left: 30%; transform: translate(-50%, -50%);display:inline; " /></a>
+					<a href="index.html"><img src="img/btn-2.png" style="width:350px;position: absolute;bottom:30px;left: 70%; transform: translate(-50%, -50%);display:inline; " /></a>
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.fullpage.min.js"></script>
+	<script src="js/data.js"></script>
+	<script src="http://cdn.staticfile.org/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script>
+		var start = new Date().getTime();
+		//		function timeAdd() {
+		//			$('#second').text(Math.floor($('#second').text()) + 1);
+		//			$('.num7').text(Math.floor($('#second').text())*10);
+		//			$('#playerMoney').text(Math.floor($('#playerMoney').text())*1000);
+		//		}
+		　　
+		//获取url中的参数
+		function getUrlParam(name) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+			var r = window.location.search.substr(1).match(reg); //匹配目标参数
+			if(r != null) return unescape(r[2]);
+			return null; //返回参数值
+		}
+		$(function() {
+
+			var player = getUrlParam('player');
+			var money = getUrlParam('money');
+
+			var name = data.filter(function(e) {
+				return e.id == player;
+			})[0].name;
+			var salary = data.filter(function(e) {
+				return e.id == player;
+			})[0].salary;
+			var age = data.filter(function(e) {
+				return e.id == player;
+			})[0].age;
+
+			$(".name").text(name)
+
+			var decimal_places = 1;
+			var decimal_factor = decimal_places === 0 ? 1 : decimal_places * 10;
+
+			$('.salary').animateNumber({
+					number: salary
+				},
+				2000
+			)
+			$('.num1').animateNumber({
+					number: money / (salary / 365 / 24 / 60 * 7.9296) * decimal_factor,
+
+					numberStep: function(now, tween) {
+						var floored_number = Math.floor(now) / decimal_factor,
+							target = $(tween.elem);
+						if(decimal_places > 0) {
+							floored_number = floored_number.toFixed(decimal_places);
+						}
+
+						target.text(floored_number);
+					}
+				},
+				2000
+			)
+
+			$('#dowebok').fullpage({
+				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
+				afterLoad: function(anchorLink, index) {
+					//alert(index)
+					if(index == 2) {
+						$('.num2').animateNumber({
+							number: (salary * 7.9296 / money * 12)
+						}, 2000)
+					}
+					if(index == 3) {
+						$('.num3').animateNumber({
+							number: 8000 / (salary / 365 / 24 / 60 * 7.9296)
+						}, 2000)
+						$('.num4').animateNumber({
+							number: 200 / (money / 30 / 24 / 60)
+						}, 2000)
+					}
+					if(index == 4) {
+						$('.num5').animateNumber({
+								number: Math.floor(10000000) / (salary / 12 * 7.9296) * decimal_factor,
+
+								numberStep: function(now, tween) {
+									var floored_number = Math.floor(now) / decimal_factor,
+										target = $(tween.elem);
+									if(decimal_places > 0) {
+										floored_number = floored_number.toFixed(decimal_places);
+									}
+
+									target.text(floored_number);
+								}
+							},
+							2000
+					)
+						$('.num6').animateNumber({
+							number: Math.floor(10000000) / money / 12
+						}, 2000)
+					}
+					if(index == 5) {
+
+						setInterval(function() {
+							var end = new Date().getTime();
+							//							$('#second').text(Math.floor($('#second').text()) + 1);
+							//							$('.num7').text(Math.floor($('#second').text()) * 10);
+							//							$('#playerMoney').text(Math.floor($('#playerMoney').text()) * 1000);
+							$('.num6').text(
+								Math.floor((end - start) / 1000)
+							)
+							$('.num7').text(
+								Math.floor((money/30/24/60/60)*(end-start)*7.9296/10)/100
+//								Math.floor((Math.floor((money / 30 / 24 / 60 / 60) / ((end - start) / 1000) * 10000) / 100.000) * decimal_factor * 10, )
+								//									numberStep: function(now, tween) {
+								//										var floored_number = Math.floor(now) / decimal_factor,
+								//											target = $(tween.elem);
+								//										if(decimal_places > 0) {
+								//											floored_number = floored_number.toFixed(decimal_places);
+								//										}
+								//
+								//										target.text(floored_number / 10);
+								//									}
+								//								},
+								//								1000
+							)
+							$('.num8').text(Math.floor((salary / 365 / 24 / 60 / 60 * 7.9296) * ((end - start) / 1000)))
+
+						}, 1000)
+
+					}
+					if(index == 6) {
+						//
+					}
+				},
+				onLeave: function(index, direction) {
+					if(index == '2') {
+						//
+					}
+					if(index == '3') {
+						//
+					}
+					if(index == '4') {
+						//
+					}
+				}
+			});
+			//			setInterval(function() {
+			//				timeAdd()
+			//			}, 1000)
+		});
+	</script>
+
+</html>
